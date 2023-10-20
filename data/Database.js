@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const uri = "mongodb+srv://dbuser:FALLEN@cluster0.h7jcu0i.mongodb.net/BlogPost-Database?retryWrites=true&w=majority"
+const uri = process.env.MONGO_URI;
 
 const ConnectDB = () => {
     mongoose.connect(uri)

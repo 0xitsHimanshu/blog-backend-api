@@ -14,6 +14,8 @@ export const getAllBlogs = async (req,res, next)=>{
 export const addBlog =async (req,res,next) =>{
     try {
         const {title,description,image, user} = req.body;
+        
+
         const blog = await Blog.create({title,description,image,user});
 
         return res.status(200).json({blog});
